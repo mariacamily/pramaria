@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sim ou Não?</title>
+    <link rel="stylesheet" href="css/style.css">
+ <style>
+    body{
+        background-color: pink;
+    }
+    
+    
+    .painel {
+        
+        margin: auto;
+        width: 500px;
+        height: 550px;
+        background-color: white;
+        border-radius: 20px;
+        text-align: center;
+        padding-top: 50px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+   #sim{
+   
+   width: 60px;
+   height: 40px;
+   background-color: rgb(71, 131, 71);
+   border: 2px solid white;
+   border-radius: 20px;
+   color: white;
+   margin-left: -80px;
+
+
+
+   }
+   
+   #nao{
+    position: absolute;
+    width: 60px;
+   height: 40px;
+   background-color: rgb(177, 49, 40);
+   border: 2px solid white;
+   border-radius: 20px;
+   color: white;
+   margin-left: 5px;
+   
+
+
+   }
+
+ 
+ </style>
+
+
+</head>
+<body>
+    <div class="painel">
+        <h1> Oi Maria! </h1>
+        <img src="https://i.pinimg.com/originals/cc/16/13/cc161388cae8971fd80e96f2e73062df.gif" alt="">
+        
+        <h3> Aceita criar gatinhos comigo?</h5>
+       
+       <button id="sim" onclick="parabens()" > Sim! </button>  
+       
+        <button onmouseover="fuja()" id="nao"> Não! </button>
+
+        
+      
+
+    </div>
+<script>
+function fuja(){
+var botaonao = document.getElementById ("nao")
+
+
+var largurajanela = window.innerWidth;
+var alturajanela = window.innerHeight;
+
+var maxX = largurajanela - botaonao.offsetWidth;
+var maxY = alturajanela - botaonao.offsetHeight;
+
+var aleatorioX = Math.floor(Math.random() * maxX);
+var aleatorioY = Math.floor(Math.random() * maxY);
+
+botaonao.style.left = aleatorioX + "px";
+botaonao.style.top = aleatorioY + "px";
+
+
+}
+
+function parabens(){
+alert("Ebaa!! Agora vamos dar uns beijos :) ");
+
+}
+
+</script>
+
+
+
+</body>
+</html>
